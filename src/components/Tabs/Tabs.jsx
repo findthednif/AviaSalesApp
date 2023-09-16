@@ -10,31 +10,31 @@ export default function Tabs() {
 
   return (
     <ul className='tabs'>
-      <li className={`tabs__tab ${activeTab === 0 ? 'active' : ''}`}>
+      <li className='tabs__tab'>
         <button
           type='button'
           onClick={() => dispatch(setActiveTab(0))}
-          className='tabs__link'
+          className={`tabs__button ${activeTab === 0 ? 'active' : ''}`}
         >
           САМЫЙ ДЕШЕВЫЙ
         </button>
       </li>
-      <li className={`tabs__tab ${activeTab === 1 ? 'active' : ''}`}>
+      <li className='tabs__tab'>
         <button
           type='button'
           onClick={() => dispatch(setActiveTab(1))}
-          className='tabs__link'
+          className={`tabs__button ${activeTab === 1 ? 'active' : ''}`}
         >
           САМЫЙ БЫСТРЫЙ
         </button>
       </li>
-      <li className={`tabs__tab ${activeTab === 2 ? 'active' : ''}`}>
+      <li className='tabs__tab'>
         <button
           type='button'
           onClick={() => {
             dispatch(setActiveTab(2));
           }}
-          className='tabs__link'
+          className={`tabs__button ${activeTab === 2 ? 'active' : ''}`}
         >
           ОПТИМАЛЬНЫЙ
         </button>

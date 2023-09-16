@@ -2,24 +2,17 @@
   display: flex;
   list-style-type: none;
   margin: 0;
-  padding-left: 20px;
+  padding: 0;
+  margin-left: 20px;
   width: 502px;
+  border: 1px solid rgba(223, 229, 236, 1);
+  border-radius: 3px;
   .tabs__tab {
     width: 100%;
     height: 50px;
-    background-color: white;
-    border: 1px solid rgba(223, 229, 236, 1);
-    border-radius: 5%;
+    border: none;
 
-    &.active {
-      background-color: rgba(33, 150, 243, 1);
-
-      .tabs__link {
-        color: white;
-      }
-    }
-
-    .tabs__link {
+    .tabs__button {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -30,9 +23,16 @@
       transition: background-color 0.3s ease-in-out;
       font-weight: 600;
       font-size: 12px;
+      border: none;
+      background-color: white;
+      border: 1px solid rgba(223, 229, 236, 1);
       &:hover {
         transition: box-shadow 0.3s;
         box-shadow: 0 0px 12px rgba(0, 0, 0, 0.2);
+      }
+      &.active {
+        color: white;
+        background-color: rgba(33, 150, 243, 1);
       }
     }
   }
