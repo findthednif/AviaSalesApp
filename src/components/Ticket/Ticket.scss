@@ -1,0 +1,40 @@
+.ticket {
+  box-sizing: border-box;
+  padding: 30px;
+  box-shadow: 0 0px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 2%;
+  .ticket__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .ticket__price {
+      font-weight: 600;
+      font-size: 24px;
+      color: rgba(33, 150, 243, 1);
+    }
+    .ticket__airline {
+      width: auto;
+      height: auto;
+    }
+  }
+  .ticket__to,
+  .ticket__back {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    .to__info,
+    .back__info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      .info__head {
+        color: rgba(160, 176, 185, 1);
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 0px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 2%;
+  width: auto;
+  height: auto;
+  padding: 30px;
+  margin-bottom: 20px;
+  .filters__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(241, 252, 255, 1);
+      cursor: pointer;
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+      width: 20px;
+      height: 20px;
+
+      + .checkmark {
+        background-color: white;
+        border-color: rgba(154, 187, 206, 1);
+        margin-right: 15px;
+      }
+
+      &:checked + .checkmark {
+        background-color: white;
+        border-color: rgba(33, 150, 243, 1);
+      }
+
+      &:checked + .checkmark:after {
+        content: '\2713';
+        font-size: 14px;
+        color: rgba(33, 150, 243, 1);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .checkmark {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(154, 187, 206, 1);
+      background-color: rgba(33, 150, 243, 1);
+      border-radius: 3px;
+      transition:
+        border-color 0.3s,
+        background-color 0.3s;
+    }
+  }
+}
